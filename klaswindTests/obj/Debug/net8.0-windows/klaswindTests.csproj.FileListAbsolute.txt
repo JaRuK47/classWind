@@ -115,3 +115,4 @@ C:\Users\anuch\OneDrive\Документы\vs\klaswind\klaswindTests\obj\Debug\n
 C:\Users\anuch\OneDrive\Документы\vs\klaswind\klaswindTests\obj\Debug\net8.0-windows\klaswindTests.pdb
 C:\Users\anuch\OneDrive\Документы\vs\klaswind\klaswindTests\obj\Debug\net8.0-windows\klaswindTests.genruntimeconfig.cache
 C:\Users\anuch\OneDrive\Документы\vs\klaswind\klaswindTests\obj\Debug\net8.0-windows\ref\klaswindTests.dll
+C:\Users\anuch\OneDrive\Документы\vs\klaswind\klaswindTests\obj\Debug\net8.0-windows\klaswindTests.sourcelink.json
