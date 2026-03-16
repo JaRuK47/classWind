@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35312.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "klaswind", "klaswind\klaswind.csproj", "{8AFD1D90-D699-4462-9CD9-A2503204A35E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "klaswindTests", "klaswindTests\klaswindTests.csproj", "{C9629B27-CB25-44B5-A1A0-BD573CA63240}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8AFD1D90-D699-4462-9CD9-A2503204A35E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AFD1D90-D699-4462-9CD9-A2503204A35E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AFD1D90-D699-4462-9CD9-A2503204A35E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AFD1D90-D699-4462-9CD9-A2503204A35E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9629B27-CB25-44B5-A1A0-BD573CA63240}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9629B27-CB25-44B5-A1A0-BD573CA63240}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9629B27-CB25-44B5-A1A0-BD573CA63240}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9629B27-CB25-44B5-A1A0-BD573CA63240}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8E32439B-2216-4CF4-B236-17985A362027}
+	EndGlobalSection
+EndGlobal

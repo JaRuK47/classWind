@@ -1,0 +1,16 @@
+C:\Users\anuch\OneDrive\Документы\vs\klaswind\klaswind\bin\Debug\net8.0-windows\klaswind.exe
+C:\Users\anuch\OneDrive\Документы\vs\klaswind\klaswind\bin\Debug\net8.0-windows\klaswind.deps.json
+C:\Users\anuch\OneDrive\Документы\vs\klaswind\klaswind\bin\Debug\net8.0-windows\klaswind.runtimeconfig.json
+C:\Users\anuch\OneDrive\Документы\vs\klaswind\klaswind\bin\Debug\net8.0-windows\klaswind.dll
+C:\Users\anuch\OneDrive\Документы\vs\klaswind\klaswind\bin\Debug\net8.0-windows\klaswind.pdb
+C:\Users\anuch\OneDrive\Документы\vs\klaswind\klaswind\obj\Debug\net8.0-windows\klaswind.Form1.resources
+C:\Users\anuch\OneDrive\Документы\vs\klaswind\klaswind\obj\Debug\net8.0-windows\klaswind.csproj.GenerateResource.cache
+C:\Users\anuch\OneDrive\Документы\vs\klaswind\klaswind\obj\Debug\net8.0-windows\klaswind.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\anuch\OneDrive\Документы\vs\klaswind\klaswind\obj\Debug\net8.0-windows\klaswind.AssemblyInfoInputs.cache
+C:\Users\anuch\OneDrive\Документы\vs\klaswind\klaswind\obj\Debug\net8.0-windows\klaswind.AssemblyInfo.cs
+C:\Users\anuch\OneDrive\Документы\vs\klaswind\klaswind\obj\Debug\net8.0-windows\klaswind.csproj.CoreCompileInputs.cache
+C:\Users\anuch\OneDrive\Документы\vs\klaswind\klaswind\obj\Debug\net8.0-windows\klaswind.dll
+C:\Users\anuch\OneDrive\Документы\vs\klaswind\klaswind\obj\Debug\net8.0-windows\refint\klaswind.dll
+C:\Users\anuch\OneDrive\Документы\vs\klaswind\klaswind\obj\Debug\net8.0-windows\klaswind.pdb
+C:\Users\anuch\OneDrive\Документы\vs\klaswind\klaswind\obj\Debug\net8.0-windows\klaswind.genruntimeconfig.cache
+C:\Users\anuch\OneDrive\Документы\vs\klaswind\klaswind\obj\Debug\net8.0-windows\ref\klaswind.dll
