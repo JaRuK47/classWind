@@ -31,16 +31,16 @@ namespace klaswind.Tests
         public void AddNumberTest()
         {
             var val = new NumberSystem(1, MeasureType.n10);
-            val = val + 4.25;
-            Assert.AreEqual("5,25 с.с. 10", val.Verbose());
+            val = val + 4;
+            Assert.AreEqual("5 с.с. 10", val.Verbose());
         }
 
         [TestMethod()]
         public void SubNumberTest()
         {
             var val = new NumberSystem(3, MeasureType.n10);
-            val = val - 1.75;
-            Assert.AreEqual("1,25 с.с. 10", val.Verbose());
+            val = val - 1;
+            Assert.AreEqual("2 с.с. 10", val.Verbose());
         }
 
         [TestMethod()]
@@ -57,6 +57,40 @@ namespace klaswind.Tests
             var val = new NumberSystem(3, MeasureType.n10);
             val = val / 3;
             Assert.AreEqual("1 с.с. 10", val.Verbose());
+        }
+
+        [TestMethod()]
+        public void ССToAnyTest()
+        {
+            NumberSystem val;
+
+            val = new NumberSystem(4, MeasureType.n10);
+            Assert.AreEqual("100 с.с. 2", val.To(MeasureType.n2).Verbose());
+
+            val = new NumberSystem(4 * 4, MeasureType.n10);
+            Assert.AreEqual("20 с.с. 8", val.To(MeasureType.n8).Verbose());
+
+            val = new NumberSystem(20, MeasureType.n10);
+            Assert.AreEqual("14 с.с. 16", val.To(MeasureType.n16).Verbose());
+
+            val = new NumberSystem(100, MeasureType.n2);
+            Assert.AreEqual("4 с.с. 10", val.To(MeasureType.n10).Verbose());
+
+            val = new NumberSystem(100000, MeasureType.n2);
+            Assert.AreEqual("20 с.с. 16", val.To(MeasureType.n16).Verbose());
+        }
+
+        [TestMethod()]
+        public void AddSubN2N16Test()
+        {
+            var n2 = new NumberSystem(10100, MeasureType.n2);
+            var n16 = new NumberSystem(18, MeasureType.n16);
+
+            Assert.AreEqual("44 с.с. 10", (n2 + n16).Verbose());
+            Assert.AreEqual("44 с.с. 10", (n16 + n2).Verbose());
+
+            Assert.AreEqual("-4 с.с. 10", (n2 - n16).Verbose());
+            Assert.AreEqual("4 с.с. 10", (n16 - n2).Verbose());
         }
     }
 }

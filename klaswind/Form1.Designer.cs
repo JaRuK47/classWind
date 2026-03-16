@@ -28,12 +28,90 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            cmbOperation = new ComboBox();
+            txtFirst = new TextBox();
+            txtSecond = new TextBox();
+            txtResult = new TextBox();
+            cmbFirstType = new ComboBox();
+            cmbSecondType = new ComboBox();
+            SuspendLayout();
+            // 
+            // cmbOperation
+            // 
+            cmbOperation.FormattingEnabled = true;
+            cmbOperation.Items.AddRange(new object[] { "+", "-", "*", "/" });
+            cmbOperation.Location = new Point(21, 32);
+            cmbOperation.Name = "cmbOperation";
+            cmbOperation.Size = new Size(52, 28);
+            cmbOperation.TabIndex = 0;
+            cmbOperation.Text = "+";
+            cmbOperation.SelectedIndexChanged += cmbOperation_SelectedIndexChanged;
+            // 
+            // txtFirst
+            // 
+            txtFirst.Location = new Point(90, 12);
+            txtFirst.Name = "txtFirst";
+            txtFirst.Size = new Size(125, 27);
+            txtFirst.TabIndex = 1;
+            txtFirst.TextChanged += textFirst_TextChanged;
+            // 
+            // txtSecond
+            // 
+            txtSecond.Location = new Point(90, 54);
+            txtSecond.Name = "txtSecond";
+            txtSecond.Size = new Size(125, 27);
+            txtSecond.TabIndex = 2;
+            txtSecond.TextChanged += txtSecond_TextChanged;
+            // 
+            // txtResult
+            // 
+            txtResult.Location = new Point(21, 102);
+            txtResult.Name = "txtResult";
+            txtResult.Size = new Size(287, 27);
+            txtResult.TabIndex = 3;
+            // 
+            // cmbFirstType
+            // 
+            cmbFirstType.FormattingEnabled = true;
+            cmbFirstType.Location = new Point(232, 11);
+            cmbFirstType.Name = "cmbFirstType";
+            cmbFirstType.Size = new Size(76, 28);
+            cmbFirstType.TabIndex = 7;
+            cmbFirstType.SelectedIndexChanged += cmbFirstType_SelectedIndexChanged;
+            // 
+            // cmbSecondType
+            // 
+            cmbSecondType.FormattingEnabled = true;
+            cmbSecondType.Location = new Point(232, 54);
+            cmbSecondType.Name = "cmbSecondType";
+            cmbSecondType.Size = new Size(76, 28);
+            cmbSecondType.TabIndex = 8;
+            cmbSecondType.SelectedIndexChanged += cmbSecondType_SelectedIndexChanged;
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(320, 151);
+            Controls.Add(cmbSecondType);
+            Controls.Add(cmbFirstType);
+            Controls.Add(txtResult);
+            Controls.Add(txtSecond);
+            Controls.Add(txtFirst);
+            Controls.Add(cmbOperation);
+            Name = "Form1";
+            Text = "Form1";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private ComboBox cmbOperation;
+        private TextBox txtFirst;
+        private TextBox txtSecond;
+        private TextBox txtResult;
+        private ComboBox cmbFirstType;
+        private ComboBox cmbSecondType;
     }
 }
