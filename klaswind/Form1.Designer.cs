@@ -45,7 +45,7 @@
             cmbOperation.Size = new Size(52, 28);
             cmbOperation.TabIndex = 0;
             cmbOperation.Text = "+";
-            cmbOperation.SelectedIndexChanged += cmbOperation_SelectedIndexChanged;
+            cmbOperation.SelectedIndexChanged += onValueChanged;
             // 
             // txtFirst
             // 
@@ -53,7 +53,7 @@
             txtFirst.Name = "txtFirst";
             txtFirst.Size = new Size(125, 27);
             txtFirst.TabIndex = 1;
-            txtFirst.TextChanged += textFirst_TextChanged;
+            txtFirst.TextChanged += onValueChanged;
             // 
             // txtSecond
             // 
@@ -61,7 +61,7 @@
             txtSecond.Name = "txtSecond";
             txtSecond.Size = new Size(125, 27);
             txtSecond.TabIndex = 2;
-            txtSecond.TextChanged += txtSecond_TextChanged;
+            txtSecond.TextChanged += onValueChanged;
             // 
             // txtResult
             // 
@@ -77,7 +77,7 @@
             cmbFirstType.Name = "cmbFirstType";
             cmbFirstType.Size = new Size(76, 28);
             cmbFirstType.TabIndex = 7;
-            cmbFirstType.SelectedIndexChanged += cmbFirstType_SelectedIndexChanged;
+            cmbFirstType.SelectedIndexChanged += onValueChanged;
             // 
             // cmbSecondType
             // 
@@ -86,7 +86,7 @@
             cmbSecondType.Name = "cmbSecondType";
             cmbSecondType.Size = new Size(76, 28);
             cmbSecondType.TabIndex = 8;
-            cmbSecondType.SelectedIndexChanged += cmbSecondType_SelectedIndexChanged;
+            cmbSecondType.SelectedIndexChanged += onValueChanged;
             // 
             // Form1
             // 

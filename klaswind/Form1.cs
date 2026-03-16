@@ -18,16 +18,6 @@ namespace klaswind
             cmbSecondType.DataSource = new List<string>(measureItems);
         }
 
-        private void textFirst_TextChanged(object sender, EventArgs e)
-        {
-            Calculate();
-        }
-
-        private void txtSecond_TextChanged(object sender, EventArgs e)
-        {
-            Calculate();
-        }
-
         private MeasureType GetMeasureType(ComboBox comboBox)
         {
             MeasureType measureType;
@@ -93,17 +83,7 @@ namespace klaswind
             }
         }
 
-        private void cmbOperation_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            Calculate();
-        }
-
-        private void cmbFirstType_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            Calculate();
-        }
-
-        private void cmbSecondType_SelectedIndexChanged(object sender, EventArgs e)
+        private void onValueChanged(object sender, EventArgs e)
         {
             Calculate();
         }
