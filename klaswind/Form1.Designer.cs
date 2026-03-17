@@ -53,6 +53,7 @@
             txtFirst.Name = "txtFirst";
             txtFirst.Size = new Size(125, 27);
             txtFirst.TabIndex = 1;
+            txtFirst.Text = "0";
             txtFirst.TextChanged += onValueChanged;
             // 
             // txtSecond
@@ -61,6 +62,7 @@
             txtSecond.Name = "txtSecond";
             txtSecond.Size = new Size(125, 27);
             txtSecond.TabIndex = 2;
+            txtSecond.Text = "0";
             txtSecond.TextChanged += onValueChanged;
             // 
             // txtResult

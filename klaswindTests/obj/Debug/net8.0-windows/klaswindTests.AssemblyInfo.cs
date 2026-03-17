@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("klaswindTests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4b48b17ad2aca72b3a5129b91b391102d57d96e1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+814646a80a06bc3fa5502dfc0cb37a6f52c6b9a8")]
 [assembly: System.Reflection.AssemblyProductAttribute("klaswindTests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("klaswindTests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -11,10 +11,10 @@ namespace klaswind
     public enum MeasureType { n2, n8, n10, n16 };
     public class NumberSystem
     {
-        private int value;
+        private System.String value;
         private MeasureType type;
 
-        public NumberSystem(int value, MeasureType type)
+        public NumberSystem(System.String value, MeasureType type)
         {
             this.value = value;
             this.type = type;
@@ -43,7 +43,7 @@ namespace klaswind
 
         public static NumberSystem operator +(NumberSystem instance, int number)
         {
-            return new NumberSystem(instance.value + number, instance.type); ;
+            return new NumberSystem(Convert.ToString(int.Parse(instance.To(MeasureType.n10).value) + number), MeasureType.n10).To(instance.type); ;
         }
 
         public static NumberSystem operator +(int number, NumberSystem instance)
@@ -53,7 +53,7 @@ namespace klaswind
 
         public static NumberSystem operator *(NumberSystem instance, int number)
         {
-            return new NumberSystem(instance.value * number, instance.type); ;
+            return new NumberSystem(Convert.ToString(int.Parse(instance.To(MeasureType.n10).value) * number), MeasureType.n10).To(instance.type); ;
         }
 
         public static NumberSystem operator *(int number, NumberSystem instance)
@@ -63,73 +63,94 @@ namespace klaswind
 
         public static NumberSystem operator -(NumberSystem instance, int number)
         {
-            return new NumberSystem(instance.value - number, instance.type); ;
+            return new NumberSystem(Convert.ToString(int.Parse(instance.To(MeasureType.n10).value) - number), MeasureType.n10).To(instance.type); ;
         }
 
         public static NumberSystem operator -(int number, NumberSystem instance)
         {
-            return instance - number;
+            var inDecimal = instance.To(MeasureType.n10);
+            int newValue = number - int.Parse(inDecimal.value);
+            var result = new NumberSystem(newValue.ToString(), MeasureType.n10);
+            return result.To(instance.type);
         }
 
         public static NumberSystem operator /(NumberSystem instance, int number)
         {
-            return new NumberSystem(instance.value / number, instance.type); ;
+            return new NumberSystem(Convert.ToString(int.Parse(instance.To(MeasureType.n10).value) / number), MeasureType.n10).To(instance.type); ;
         }
 
         public static NumberSystem operator /(int number, NumberSystem instance)
         {
-            return instance / number;
+            var inDecimal = instance.To(MeasureType.n10);
+            int newValue = number / int.Parse(inDecimal.value);
+            var result = new NumberSystem(newValue.ToString(), MeasureType.n10);
+            return result.To(instance.type);
         }
 
         public NumberSystem To(MeasureType newType)
         {
-            var newValue = this.value;
-            if (this.type == MeasureType.n2)
+            if (this.type == newType)
+                return new NumberSystem(this.value, this.type);
+
+            int decimalValue;
+
+            switch (this.type)
             {
-                newValue = Convert.ToInt32(this.value.ToString(), 2);
+                case MeasureType.n2:
+                    decimalValue = Convert.ToInt32(this.value, 2);
+                    break;
+                case MeasureType.n8:
+                    decimalValue = Convert.ToInt32(this.value, 8);
+                    break;
+                case MeasureType.n16:
+                    decimalValue = Convert.ToInt32(this.value, 16);
+                    break;
+                case MeasureType.n10:
+                default:
+                    decimalValue = int.Parse(this.value);
+                    break;
             }
-            if (this.type == MeasureType.n8)
-            {
-                newValue = Convert.ToInt32(this.value.ToString(), 8);
-            }
-            if (this.type == MeasureType.n16)
-            {
-                newValue = Convert.ToInt32(this.value.ToString(), 16);
-            }
+
+            string resultValue;
 
             switch (newType)
             {
                 case MeasureType.n2:
-                    newValue = int.Parse(Convert.ToString(newValue, 2));
+                    resultValue = Convert.ToString(decimalValue, 2);
                     break;
                 case MeasureType.n8:
-                    newValue = int.Parse(Convert.ToString(newValue, 8));
+                    resultValue = Convert.ToString(decimalValue, 8);
                     break;
                 case MeasureType.n16:
-                    newValue = int.Parse(Convert.ToString(newValue, 16));
+                    resultValue = Convert.ToString(decimalValue, 16).ToUpper();
+                    break;
+                case MeasureType.n10:
+                default:
+                    resultValue = decimalValue.ToString();
                     break;
             }
-            return new NumberSystem(newValue, newType);
+
+            return new NumberSystem(resultValue, newType);
         }
 
         public static NumberSystem operator +(NumberSystem instance1, NumberSystem instance2)
         {
-            return instance1.To(MeasureType.n10) + instance2.To(MeasureType.n10).value;
+            return instance1 + int.Parse(instance2.To(MeasureType.n10).value);
         }
 
         public static NumberSystem operator -(NumberSystem instance1, NumberSystem instance2)
         {
-            return instance1.To(MeasureType.n10) - instance2.To(MeasureType.n10).value;
+            return instance1 - int.Parse(instance2.To(MeasureType.n10).value);
         }
 
         public static NumberSystem operator *(NumberSystem instance1, NumberSystem instance2)
         {
-            return instance1.To(MeasureType.n10) * instance2.To(MeasureType.n10).value;
+            return instance1 * int.Parse(instance2.To(MeasureType.n10).value);
         }
 
         public static NumberSystem operator /(NumberSystem instance1, NumberSystem instance2)
         {
-            return instance1.To(MeasureType.n10) / instance2.To(MeasureType.n10).value;
+            return instance1 / int.Parse(instance2.To(MeasureType.n10).value);
         }
     }
 }

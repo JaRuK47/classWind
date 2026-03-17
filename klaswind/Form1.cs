@@ -46,8 +46,8 @@ namespace klaswind
         {
             try
             {
-                var firstValue = int.Parse(txtFirst.Text);
-                var secondValue = int.Parse(txtSecond.Text);
+                var firstValue = txtFirst.Text;
+                var secondValue = txtSecond.Text;
 
                 MeasureType firstType = GetMeasureType(cmbFirstType);
                 MeasureType secondType = GetMeasureType(cmbSecondType);
@@ -72,7 +72,7 @@ namespace klaswind
                         sumLength = firstNS / secondNS;
                         break;
                     default:
-                        sumLength = new NumberSystem(0, MeasureType.n10);
+                        sumLength = new NumberSystem("0", MeasureType.n10);
                         break;
                 }
 
